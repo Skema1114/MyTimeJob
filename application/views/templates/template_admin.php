@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>SEG| Sistema</title>
+  <title>My TimeJob</title>
 
   <!-- Bootstrap CSS -->
   <?= link_tag('assets/css/bootstrap.min.css'); ?>
@@ -52,7 +52,7 @@
         </div>
 
         <!--logo start-->
-        <a href="<?=site_url('sistema')?>" class="logo"><span class="lite">SEG</span></a>
+        <a href="<?=site_url('sistema')?>" class="logo"><span class="lite">My TimeJob</span></a>
         <!--logo end-->
 
         <div class="top-nav notification-row">
@@ -103,74 +103,52 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-          <li class="active">
-            <a class="" href="<?=site_url('sistema')?>">
-              <i class="icon_house_alt"></i>
-              <span>Início</span>
-            </a>
-          </li>
-          
           <li class="sub-menu">
             <a class="" href="javascript:;">
               <i class="icon_genius"></i>
-              <span>Cadastro </span>
+              <span>Usuario</span>
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
             <ul class="sub">
-              <li><a class="" href="<?=site_url('usuario')?>">Usuario</a></li>
-              <li><a class="" href="<?=site_url('estado')?>">Estado</a></li>
-              <li><a class="" href="<?=site_url('cidade')?>">Cidade</a></li>
-              <li><a class="" href="<?=site_url('usuarioResponsavel')?>">Usuario Responsavel</a></li>
-              <li><a class="" href="<?=site_url('curso')?>">Curso</a> </li>
-              <li><a class="" href="<?=site_url('laboratorio')?>">Laboratorio</a></li>
-              <li><a class="" href="<?=site_url('unidadeMedida')?>">Unidade Medida</a></li>
-              <li><a class="" href="<?=site_url('categoriaProduto')?>">Categoria do Produto</a></li>
-
+              <li><a class="" href="<?=site_url('usuario')?>">Adicionar</a></li>
             </ul>
+          
+            <li class="sub-menu">
+            <a href="javascript:;" class="">
+            <i class="icon_document_alt"></i>
+              <span>Tarefa</span>
+              <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
+            <ul class="sub">
+              <li><a class="" href="<?=site_url('tarefa')?>">Listar</a></li>
+              <li><a class="" href="<?=site_url('tarefa/adicionar')?>">Criar</a></li>
+            </ul>
+          </li>
+          
           <li class="sub-menu">
             <a href="javascript:;" class="">
             <i class="icon_document_alt"></i>
-              <span>Pedido</span>
+              <span>Tipo</span>
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
             <ul class="sub">
-              <li><a class=""  href="TODO: pedidos.php"href="">Adicionar</a></li>
-              <li><a class="" href="<?=site_url('pedido')?>">Atualizacões</a></li>
+              <li><a class="" href="">Listar</a></li>
+              <li><a class="" href="">Criar</a></li>
             </ul>
           </li>
+
           <li class="sub-menu">
             <a href="javascript:;" class="">
-              <i class="icon_table"></i>
-              <span>Estoque</span>
+            <i class="icon_document_alt"></i>
+              <span>Status</span>
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
             <ul class="sub">
-              <li><a class="" href="TODO: estoque.php">Ver</a></li>
+              <li><a class="" href="">Listar</a></li>
+              <li><a class="" href="">Criar</a></li>
             </ul>
           </li>
-          <li>
-            <a class="" href="TODO: historico">
-              <i class="icon_documents_alt"></i>
-              <span>Historico</span>
-            </a>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-              <i class="icon_genius"></i>
-              <span>Horti fruti </span>
-              <span class="menu-arrow arrow_carrot-right"></span>
-            </a>
-            <ul class="sub">
-              <li><a class="" href="TODO: Link do Disponível">Disponivel</a></li>
-              <li><a class="" href="TODO: Link do Sobras"><span>Sobras</span></a></li>
-            </ul>
-          </li>
-          <li>
-            <a class="" href="TODO: Link do Calendário">
-              <i class="icon_documents_alt"></i>
-              <span>Calendário</span>
-            </a>
-          </li>
+
           </ul>
           <!-- sidebar menu end-->
         </div>

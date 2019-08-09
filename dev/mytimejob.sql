@@ -26,14 +26,15 @@ CREATE TABLE IF NOT EXISTS `mytimejob`.`Tarefa` (
   `idTarefa` INT NOT NULL AUTO_INCREMENT,
   `tipo` VARCHAR(20) NOT NULL,
   `tarefa` VARCHAR(100) NOT NULL,
-  `dataCadastro` DATE NOT NULL,
+  `dataCadastro` DATETIME NOT NULL DEFAULT now(),
   `codigo` VARCHAR(45) NOT NULL,
   `status` VARCHAR(20) NOT NULL,
-  `dataModificacao` DATETIME NULL DEFAULT now(),
+  `dataModificacao` DATETIME NULL,
   PRIMARY KEY (`idTarefa`))
 ENGINE = InnoDB;
 
 INSERT INTO Usuario  (nome,email,senha,tipoUsuario) values ('Administrador', 'admin@admin.com','$2y$10$uBiwX54Mym/GfsQ3QuuAIuK3L0GPItjHmS615NwSBinAKNAKTv86G',1);
+INSERT INTO Usuario  (nome,email,senha,tipoUsuario) values ('Facil Acesso', 'a@a.a','$2y$10$eZhCzoevAbvFOhWMQzajBOPVH2bSwXPTOywQbIyYb8bt46yWL0p6O',1);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

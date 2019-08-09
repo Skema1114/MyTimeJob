@@ -33,10 +33,6 @@
 								<input required type='text' id='nome'	autofocus name='nome' class='form-control' value="<?=$this->usuario_modelo->nome?>">
 							</div>
 							<div class='form-group required'>
-								<label for='nome' class="control-label">Siape</label>
-								<input required type='text' id='siaep'	autofocus name='siape' class='form-control' value="<?=$this->usuario_modelo->siape?>">
-							</div>
-							<div class='form-group required'>
 								<label for='email' class="control-label">Email</label> 
 								<input type='email' id='email' name='email' class='form-control' value="<?=$this->usuario_modelo->email?>" required>
 							</div>
@@ -64,7 +60,7 @@
 
 							<div class='row'>
 								<div class='col col-xs-6'>
-									<a class="btn btn-default" href="<?=site_url('usuario')?>">
+									<a class="btn btn-default" href="<?=site_url('usuario/index')?>">
 										<span class="glyphicon glyphicon-menu-left"></span>
 										Voltar
 									</a>

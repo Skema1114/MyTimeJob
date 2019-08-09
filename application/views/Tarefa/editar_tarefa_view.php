@@ -19,10 +19,10 @@
       <div class="col-md-12">
         <div class="panel panel-default">
 
-          <div class="panel-body" style="padding-left: 25%; padding-right: 25%">
+          <div class="panel-body">
 
            <form action="<?=site_url('tarefa/gravar')?>" id="frmTarefa" method="post" accept-charset="utf-8" class="auto-config" >
-             <div class='form-group required text-center'>
+             <div class='form-group required'>
                 <input type="hidden" name="idTarefa" value="<?=$this->tarefa_modelo->idTarefa?>"/>
 
                 <label for='tipo' class="control-label"><strong>Tipo</strong></label>
@@ -32,7 +32,7 @@
                 <input required type='text' id='tarefa' name='tarefa' class='form-control' value="<?=$this->tarefa_modelo->tarefa?>">
                 
                 <label for='dataCadastro' class="control-label"><strong>Data</strong></label>
-                <input required type='text' id='dataCadastro' name='dataCadastro' class='form-control' value="<?=$this->tarefa_modelo->dataCadastro?>">
+                <input required type='date' id='dataCadastro' name='dataCadastro' class='form-control' value="<?=$this->tarefa_modelo->dataCadastro?>">
 
                 <label for='codigo' class="control-label"><strong>Código</strong></label>
                 <input required type='text' id='codigo' name='codigo' class='form-control' value="<?=$this->tarefa_modelo->codigo?>">
@@ -41,7 +41,7 @@
                 <input required type='text' id='status' name='status' class='form-control' value="<?=$this->tarefa_modelo->status?>">
 
                 <label for='dataModificacao' class="control-label"><strong>Data de Movimentação</strong></label>
-                <input required type='text' id='dataModificacao' name='dataModificacao' class='form-control' value="<?=$this->tarefa_modelo->dataModificacao?>">
+                <input required type='date' id='dataModificacao' name='dataModificacao' class='form-control' value="<?=$this->tarefa_modelo->dataModificacao?>">
             </div>
             <div class='row'>
               <div class='col col-xs-6'>

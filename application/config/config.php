@@ -23,7 +23,7 @@ defined('APP_NAME') OR define('APP_NAME', 'SEG');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/seg';
+$config['base_url'] = 'http://localhost/mytimejob';
 
 /*
 |--------------------------------------------------------------------------

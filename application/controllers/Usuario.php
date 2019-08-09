@@ -52,7 +52,7 @@ class Usuario extends MJR_Form_Controller {
 	}
 	
 	/**
-	Função para criar o formulário para edição de senhas
+	*Função para criar o formulário para edição de senhas
 	
 	**/
 	public function Senha($id) {

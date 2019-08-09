@@ -3,10 +3,10 @@
     <!--overview start-->
     <div class="row">
       <div class="col-lg-12">
-        <h3 class="page-header"><i class="fa fa-laptop"></i>Curso</h3>
+        <h3 class="page-header"><i class="fa fa-laptop"></i>Tarefas</h3>
         <ol class="breadcrumb">
           <li><i class="fa fa-home"></i><a href="<?=site_url('sistema')?>">Home</a></li>
-          <li><i class="fa fa-laptop"></i>Curso</li>
+          <li><i class="fa fa-laptop"></i>Tarefas</li>
         </ol>
       </div>
     </div>
@@ -19,7 +19,7 @@
       <div class="col-md-12">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h2><i class="fa red"></i><strong>Cursos</strong></h2>
+            <h2><i class="fa red"></i><strong>Tarefas</strong></h2>
             <div class="panel-actions">
 
             </div>
@@ -28,17 +28,25 @@
             <table class="table bootstrap-datatable countries">
               <thead>
                <tr>
-                <th>Curso</th>
-                <th>Editar</th>
-                <th>Remover</th>
+                <th>Tipo</th>
+                <th>Tarefa</th>
+                <th>Data de Criação</th>
+                <th>Código</th>
+                <th>Status</th>
+                <th>Data de Modificação</th>
               </tr>
             </thead>
             <tbody>
-             <?php foreach ($cursos as $curso):?>
+             <?php foreach ($tarefas as $tarefa):?>
               <tr>
-                <td><?=$curso->nomeCurso?></td>
-                <td><?php echo anchor('curso/editar/'.$curso->idCurso,'<span class="glyphicon glyphicon-pencil"></span>')?></td>
-                <td><?php echo anchor('curso/remover/'.$curso->idCurso,'<span class="glyphicon glyphicon-remove"></span>')?></td>
+                <td><?=$tarefa->tipo?></td>
+                <td><?=$tarefa->tarefa?></td>
+                <td><?=$tarefa->dataCadastro?></td>
+                <td><?=$tarefa->codigo?></td>
+                <td><?=$tarefa->status?></td>
+                <td><?=$tarefa->dataModificacao?></td>
+                <td><?php echo anchor('tarefa/editar/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-pencil"></span>')?></td>
+                <td><?php echo anchor('tarefa/remover/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-remove"></span>')?></td>
               </tr>
             <?php endforeach;?>
           </tbody>
@@ -55,9 +63,9 @@
 
 </div>
 
-<a class="btn btn-default" href="<?=site_url('curso/adicionar')?>">
+<a class="btn btn-default" href="<?=site_url('tarefa/adicionar')?>">
 	<span class="glyphicon glyphicon-plus"></span>
-	Adicionar curso
+	Nova tarefa
 </a>
 
 <!-- project team & activity end -->

@@ -2,7 +2,6 @@
 defined ( 'BASEPATH' ) or exit ( 'No direct script access allowed' );
 class Usuario_modelo extends MJR_Model {
 	public $idUsuario;
-	public $siape;
 	public $nome;
 	public $email;
 	public $senha;
@@ -38,7 +37,6 @@ class Usuario_modelo extends MJR_Model {
 			if (password_verify ( $senha, $result->senha )) {
 				$userdata = array (
 						'id' => $result->idUsuario,
-						'siape' => $result->siape,
 						'nome' => $result->nome,
 						'email' => $result->email,
 						'tipoUsuario'=> $result->tipoUsuario,
