@@ -103,6 +103,13 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
+        <li class="active">
+            <a class="" href="<?=site_url('sistema')?>">
+              <i class="icon_house_alt"></i>
+              <span>Início</span>
+            </a>
+          </li>
+            
           <li class="sub-menu">
             <a class="" href="javascript:;">
               <i class="icon_genius"></i>
@@ -110,7 +117,8 @@
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
             <ul class="sub">
-              <li><a class="" href="<?=site_url('usuario')?>">Adicionar</a></li>
+              <li><a class="" href="<?=site_url('usuario')?>">Listar</a></li>
+              <li><a class="" href="<?=site_url('usuario/adicionar')?>">Adicionar</a></li>
             </ul>
           
             <li class="sub-menu">
@@ -132,8 +140,8 @@
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
             <ul class="sub">
-              <li><a class="" href="">Listar</a></li>
-              <li><a class="" href="">Criar</a></li>
+              <li><a class="" href="<?=site_url('tarefatipo')?>">Listar</a></li>
+              <li><a class="" href="<?=site_url('tarefatipo/adicionar')?>">Criar</a></li>
             </ul>
           </li>
 
@@ -144,8 +152,8 @@
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
             <ul class="sub">
-              <li><a class="" href="">Listar</a></li>
-              <li><a class="" href="">Criar</a></li>
+              <li><a class="" href="<?=site_url('tarefastatus')?>">Listar</a></li>
+              <li><a class="" href="<?=site_url('tarefastatus/adicionar')?>">Criar</a></li>
             </ul>
           </li>
 

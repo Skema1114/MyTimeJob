@@ -6,6 +6,8 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema mytimejob
 -- -----------------------------------------------------
 
+DROP DATABASE mytimejob;
+
 -- -----------------------------------------------------
 -- Schema mytimejob
 -- -----------------------------------------------------
@@ -18,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `mytimejob`.`Usuario` (
   `email` VARCHAR(100) NOT NULL,
   `tipoUsuario` INT NOT NULL,
   `senha` VARCHAR(200) NOT NULL,
-  `dataCadastro` DATETIME NULL DEFAULT now(),
+  `dataCadastro` TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
   PRIMARY KEY (`idUsuario`))
 ENGINE = InnoDB;
 
@@ -26,11 +28,27 @@ CREATE TABLE IF NOT EXISTS `mytimejob`.`Tarefa` (
   `idTarefa` INT NOT NULL AUTO_INCREMENT,
   `tipo` VARCHAR(20) NOT NULL,
   `tarefa` VARCHAR(100) NOT NULL,
-  `dataCadastro` DATETIME NOT NULL DEFAULT now(),
+  `dataCadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
   `codigo` VARCHAR(45) NOT NULL,
   `status` VARCHAR(20) NOT NULL,
   `dataModificacao` DATETIME NULL,
   PRIMARY KEY (`idTarefa`))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `mytimejob`.`TarefaStatus` (
+  `idStatus` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(20) NOT NULL,
+  `descricao` VARCHAR(250) NOT NULL,
+  `dataCadastro` DATETIME NULL DEFAULT CURRENT_TIMESTAMP(),
+  PRIMARY KEY (`idStatus`))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `mytimejob`.`TarefaTipo` (
+  `idTipo` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(20) NOT NULL,
+  `descricao` VARCHAR(250) NOT NULL,
+  `dataCadastro` DATETIME NULL DEFAULT CURRENT_TIMESTAMP(),
+  PRIMARY KEY (`idTipo`))
 ENGINE = InnoDB;
 
 INSERT INTO Usuario  (nome,email,senha,tipoUsuario) values ('Administrador', 'admin@admin.com','$2y$10$uBiwX54Mym/GfsQ3QuuAIuK3L0GPItjHmS615NwSBinAKNAKTv86G',1);

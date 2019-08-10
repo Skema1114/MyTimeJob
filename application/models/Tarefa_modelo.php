@@ -20,5 +20,4 @@ class Tarefa_modelo extends MJR_Model {
 	function get_id_field() {
 		return "idTarefa";
 	}
-	
 }
