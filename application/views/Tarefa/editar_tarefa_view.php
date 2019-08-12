@@ -26,7 +26,12 @@
                 <input type="hidden" name="idTarefa" value="<?=$this->tarefa_modelo->idTarefa?>"/>
 
                 <label for='tipoId' class="control-label"><strong>Tipo</strong></label>
-                <input required type='text' id='tipoId' autofocus name='tipoId' class='form-control' value="<?=$this->tarefa_modelo->tipoId?>">
+                <select name="tipoId">
+                  <?php foreach ($tipos as $tarefaTipo):?>
+                    <option value="<?=$tarefaTipo->idTipo?>"><?=$tarefaTipo->nome?></option>
+                  <?php endforeach;?>
+                </select>
+                
 
                 <label for='tarefa' class="control-label"><strong>Tarefa</strong></label>
                 <input required type='text' id='tarefa' name='tarefa' class='form-control' value="<?=$this->tarefa_modelo->tarefa?>">
@@ -38,7 +43,12 @@
                 <input required type='text' id='codigo' name='codigo' class='form-control' value="<?=$this->tarefa_modelo->codigo?>">
 
                 <label for='statusId' class="control-label"><strong>Status</strong></label>
-                <input required type='text' id='statusId' name='statusId' class='form-control' value="<?=$this->tarefa_modelo->statusId?>">
+                <select name="statusId">
+                  <?php foreach ($statuses as $tarefaStatus):?>
+                    <option value="<?=$tarefaStatus->idStatus?>"><?=$tarefaStatus->nome?></option>
+                  <?php endforeach;?>
+                </select>
+                
 
                 <label for='dataModificacao' class="control-label"><strong>Data de Movimentação</strong></label>
                 <input required type='date' id='dataModificacao' name='dataModificacao' class='form-control' value="<?=$this->tarefa_modelo->dataModificacao?>">
