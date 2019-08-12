@@ -39,11 +39,11 @@
             <tbody>
              <?php foreach ($tarefas as $tarefa):?>
               <tr>
-                <td><?=$tarefa->tipo?></td>
+                <td><?=$tarefa->tipoId?></td>
                 <td><?=$tarefa->tarefa?></td>
                 <td><?=$tarefa->dataCadastro?></td>
                 <td><?=$tarefa->codigo?></td>
-                <td><?=$tarefa->status?></td>
+                <td><?=$tarefa->statusId?></td>
                 <td><?=$tarefa->dataModificacao?></td>
                 <td><?php echo anchor('tarefa/editar/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-pencil"></span>')?></td>
                 <td><?php echo anchor('tarefa/remover/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-remove"></span>')?></td>

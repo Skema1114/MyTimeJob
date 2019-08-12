@@ -25,8 +25,8 @@
              <div class='form-group required'>
                 <input type="hidden" name="idTarefa" value="<?=$this->tarefa_modelo->idTarefa?>"/>
 
-                <label for='tipo' class="control-label"><strong>Tipo</strong></label>
-                <input required type='text' id='tipo' autofocus name='tipo' class='form-control' value="<?=$this->tarefa_modelo->tipo?>">
+                <label for='tipoId' class="control-label"><strong>Tipo</strong></label>
+                <input required type='text' id='tipoId' autofocus name='tipoId' class='form-control' value="<?=$this->tarefa_modelo->tipoId?>">
 
                 <label for='tarefa' class="control-label"><strong>Tarefa</strong></label>
                 <input required type='text' id='tarefa' name='tarefa' class='form-control' value="<?=$this->tarefa_modelo->tarefa?>">
@@ -37,8 +37,8 @@
                 <label for='codigo' class="control-label"><strong>Código</strong></label>
                 <input required type='text' id='codigo' name='codigo' class='form-control' value="<?=$this->tarefa_modelo->codigo?>">
 
-                <label for='status' class="control-label"><strong>Status</strong></label>
-                <input required type='text' id='status' name='status' class='form-control' value="<?=$this->tarefa_modelo->status?>">
+                <label for='statusId' class="control-label"><strong>Status</strong></label>
+                <input required type='text' id='statusId' name='statusId' class='form-control' value="<?=$this->tarefa_modelo->statusId?>">
 
                 <label for='dataModificacao' class="control-label"><strong>Data de Movimentação</strong></label>
                 <input required type='date' id='dataModificacao' name='dataModificacao' class='form-control' value="<?=$this->tarefa_modelo->dataModificacao?>">
