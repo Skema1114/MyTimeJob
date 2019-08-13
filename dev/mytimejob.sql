@@ -20,7 +20,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS mytimejob.TarefaStatus(
   idStatus INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(20) NOT NULL,
-  descricao VARCHAR(250) NOT NULL,
+  descricao VARCHAR(250) NULL,
   dataCadastro DATETIME NULL DEFAULT CURRENT_TIMESTAMP(),
   PRIMARY KEY (idStatus))
 ENGINE = InnoDB;
@@ -28,7 +28,15 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS mytimejob.TarefaTipo(
   idTipo INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(20) NOT NULL,
-  descricao VARCHAR(250) NOT NULL,
+  descricao VARCHAR(250) NULL,
+  dataCadastro DATETIME NULL DEFAULT CURRENT_TIMESTAMP(),
+  PRIMARY KEY (idTipo))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS mytimejob.TarefaMarca(
+  idMarca INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL,
+  descricao VARCHAR(250) NULL,
   dataCadastro DATETIME NULL DEFAULT CURRENT_TIMESTAMP(),
   PRIMARY KEY (idTipo))
 ENGINE = InnoDB;
@@ -36,14 +44,15 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS mytimejob.Tarefa(
   idTarefa INT NOT NULL AUTO_INCREMENT,
   tipoId INTEGER NOT NULL,
-  tarefa VARCHAR(100) NOT NULL,
+  marcaId INTEGER NOT NULL,
   dataCadastro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
   codigo VARCHAR(45) NOT NULL,
   statusId INTEGER NOT NULL,
   dataModificacao DATETIME NULL,
   PRIMARY KEY (idTarefa),
   CONSTRAINT fk_tarefaTipoTarefa FOREIGN KEY (tipoId) REFERENCES TarefaTipo (idTipo),
-  CONSTRAINT fk_tarefaStatusTarefa FOREIGN KEY (statusId) REFERENCES TarefaStatus (idStatus)
+  CONSTRAINT fk_tarefaStatusTarefa FOREIGN KEY (statusId) REFERENCES TarefaStatus (idStatus),
+  CONSTRAINT fk_tarefaMarcaTarefa FOREIGN KEY (marcaId) REFERENCES TarefaStatus (idMarca)
   )
 ENGINE = InnoDB;
 
