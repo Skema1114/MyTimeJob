@@ -29,7 +29,8 @@
               <thead>
                <tr>
                 <th>Tipo</th>
-                <th>Tarefa</th>
+                <th>Marca</th>
+                <th>Sub Marca</th>
                 <th>Data de Criação</th>
                 <th>Código</th>
                 <th>Status</th>
@@ -41,6 +42,7 @@
               <tr>
                 <td><?=$tarefa->tipoId?></td>
                 <td><?=$tarefa->tarefa?></td>
+                <td><?=$tarefa->subMarcaId?></td>
                 <td><?=$tarefa->dataCadastro?></td>
                 <td><?=$tarefa->codigo?></td>
                 <td><?=$tarefa->statusId?></td>

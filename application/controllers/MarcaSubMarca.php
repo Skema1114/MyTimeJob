@@ -2,10 +2,10 @@
 /**
  * Controlador para entidade  tarefa
  */
-class TarefaMarca extends MJR_Form_Controller {
+class MarcaSubMarca extends MJR_Form_Controller {
 	public function __construct() {
 		parent::__construct ();
-		$this->load->model ( 'tarefaMarca_modelo' );				
+		$this->load->model ( 'marcaSubMarca_modelo' );				
 	}
 	
 	/**
@@ -14,14 +14,8 @@ class TarefaMarca extends MJR_Form_Controller {
 	 */
 	public function index() {
 		// busca todos os tarefas e manda para tela
-		$this->set ( 'marca', $this->tarefaMarca_modelo->get_all () );
-		$this->template->build ( 'listar_tarefa_marca_view' );
-	}
-
-	public function minhasmarcas() {
-		// busca todos os tarefas e manda para tela
-		$this->load->model ( 'marcaSubMarca_modelo' );
-		$this->set ( 'submarcas', $this->marcaSubMarca_modelo->get_all () );
+		$this->set ( 'submarca', $this->marcaSubMarca_modelo->get_all () );
+		$this->template->build ( 'listar_marca_submarca_view' );
 	}
 	
 	/**
@@ -37,7 +31,7 @@ class TarefaMarca extends MJR_Form_Controller {
 	 */
 	public function remover($id=0) {
 		// remove o item
-		$user = $this->tarefaMarca_modelo->remover ( $id );
+		$user = $this->marcaSubMarca_modelo->remover ( $id );
 		// atualiza tabela
 		$this->index ();
 	}
@@ -47,20 +41,20 @@ class TarefaMarca extends MJR_Form_Controller {
 	 */
 	public function editar($id = 0) {
 		
-		$this->tarefaMarca_modelo->get_by_id($id); 
-		$this->minhasmarcas();
-		$this->template->build ( 'editar_tarefa_marca_view' );
+		$this->marcaSubMarca_modelo->get_by_id($id); 
+		// carrega template
+		$this->template->build ( 'editar_marca_submarca_view' );
 
 	}
 	
 	
 	public function gravar() {
 		// carrega dados da visao
-		$this->tarefaMarca_modelo->loadData ();
+		$this->marcaSubMarca_modelo->loadData ();
 		// grava a informação
 		$this->set ( 'msg_sucesso', 'Gravado com sucesso!' );
-		$this->tarefaMarca_modelo->gravar ();
+		$this->marcaSubMarca_modelo->gravar ();
 		$this->editar ();
-        redirect ( site_url ('tarefamarca') );
+        redirect ( site_url ('marcasubmarca') );
 	}
 }

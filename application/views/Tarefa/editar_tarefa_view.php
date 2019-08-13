@@ -33,9 +33,21 @@
               </select>
             </div>
 
-              <div class='form-group required'>
-                <label for='tarefa' class="control-label"><strong>Tarefa</strong></label>
-                <input required type='text' id='tarefa' name='tarefa' class='form-control' value="<?=$this->tarefa_modelo->tarefa?>">
+            <div class='form-group required'>
+              <label for='marcaId' class="control-label"><strong>Marca</strong></label><br>
+              <select name="tipoId" class="custom-select custom-select-sm">
+                <option disabled selected>Selecione</option>
+                <?php foreach ($marcas as $tarefaMarca):?>
+                  <option value="<?=$tarefaMarca->idMarca?>"><?=$tarefaMarca->nome?></option>
+                <?php endforeach;?>
+              </select>
+
+              <select name="subMarcaId" class="custom-select custom-select-sm">
+                <option disabled selected>Selecione</option>
+                <?php foreach ($submarcas as $marcaSubMarca):?>
+                  <option value="<?=$marcaSubMarca->idSubMarca?>"><?=$marcaSubMarca->nome?></option>
+                <?php endforeach;?>
+              </select>
               </div>
 
               <div class='form-group required'>

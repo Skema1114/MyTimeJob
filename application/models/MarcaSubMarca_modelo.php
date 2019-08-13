@@ -3,19 +3,18 @@
  * Modelo que representa os dados de um estado
  */
 defined ('BASEPATH') or exit ('Acesso Negado');
-class TarefaMarca_modelo extends MJR_Model {
-	public $idMarca;
+class MarcaSubMarca_modelo extends MJR_Model {
+	public $idSubMarca;
 	public $nome;
 	public $descricao;
-	public $subMarcaId;
 	public $dataCadastro;
 	
     public function __construct(){
-        parent::__construct('TarefaMarca');
+        parent::__construct('MarcaSubMarca');
     }
 	
 	function get_id_field() {
-		return "idMarca";
+		return "idSubMarca";
 	}
 	
 }

@@ -136,39 +136,16 @@
           <li class="sub-menu">
             <a href="javascript:;" class="">
             <i class="icon_document_alt"></i>
-              <span>Tipo</span>
+              <span>Cadastros</span>
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
             <ul class="sub">
-              <li><a class="" href="<?=site_url('tarefatipo')?>">Listar</a></li>
-              <li><a class="" href="<?=site_url('tarefatipo/adicionar')?>">Criar</a></li>
+              <li><a class="" href="<?=site_url('tarefatipo')?>">Tipo</a></li>
+              <li><a class="" href="<?=site_url('tarefamarca')?>">Marca</a></li>
+              <li><a class="" href="<?=site_url('marcasubmarca')?>">Sub Marca</a></li>
+              <li><a class="" href="<?=site_url('tarefastatus')?>">Status</a></li>
             </ul>
           </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-            <i class="icon_document_alt"></i>
-              <span>Marca</span>
-              <span class="menu-arrow arrow_carrot-right"></span>
-            </a>
-            <ul class="sub">
-              <li><a class="" href="<?=site_url('tarefamarca')?>">Listar</a></li>
-              <li><a class="" href="<?=site_url('tarefamarca/adicionar')?>">Criar</a></li>
-            </ul>
-          </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-            <i class="icon_document_alt"></i>
-              <span>Status</span>
-              <span class="menu-arrow arrow_carrot-right"></span>
-            </a>
-            <ul class="sub">
-              <li><a class="" href="<?=site_url('tarefastatus')?>">Listar</a></li>
-              <li><a class="" href="<?=site_url('tarefastatus/adicionar')?>">Criar</a></li>
-            </ul>
-          </li>
-
           </ul>
           <!-- sidebar menu end-->
         </div>
