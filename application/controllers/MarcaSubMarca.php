@@ -55,6 +55,6 @@ class MarcaSubMarca extends MJR_Form_Controller {
 		$this->set ( 'msg_sucesso', 'Gravado com sucesso!' );
 		$this->marcaSubMarca_modelo->gravar ();
 		$this->editar ();
-        redirect ( site_url ('marcasubmarca') );
+        redirect ( site_url ('tarefa/adicionar') );
 	}
 }

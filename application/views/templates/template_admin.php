@@ -72,20 +72,14 @@
                 <li class="sub-menu" >
                   <a href="<?=site_url('usuario/adicionar')?>" class="" >
                     <i class="fa fa-list-alt"></i>
-                    <span>Cadastro</span>
-                    <span class="menu-arrow arrow_carrot-right"></span>
-                  </a>
-                </li>
-                <li class="sub-menu">
-                  <a href="TODO:" class=""  href="javascript:;" class="" >
-                    <span>Ver usarios</span>
+                    <span>Add usuário</span>
                     <span class="menu-arrow arrow_carrot-right"></span>
                   </a>
                 </li>
                 <li>
                  <div class="log-arrow-up"></div>
                  <li class="eborder-top">
-                  <a href="<?= site_url('login/logout')?>"><i class="icon_key_alt"></i>SAIR</a>
+                  <a href="<?= site_url('login/logout')?>"><i class="icon_key_alt"></i>Sair</a>
                 </li>
               </li>
               
@@ -103,47 +97,33 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
-        <li class="active">
+        <li class="">
             <a class="" href="<?=site_url('sistema')?>">
               <i class="icon_house_alt"></i>
               <span>Início</span>
             </a>
           </li>
-            
-          <li class="sub-menu">
-            <a class="" href="javascript:;">
-              <i class="icon_genius"></i>
-              <span>Usuario</span>
-              <span class="menu-arrow arrow_carrot-right"></span>
-            </a>
-            <ul class="sub">
-              <li><a class="" href="<?=site_url('usuario')?>">Listar</a></li>
-              <li><a class="" href="<?=site_url('usuario/adicionar')?>">Adicionar</a></li>
-            </ul>
           
-            <li class="sub-menu">
-            <a href="javascript:;" class="">
-            <i class="icon_document_alt"></i>
-              <span>Tarefa</span>
-              <span class="menu-arrow arrow_carrot-right"></span>
+            <li class="">
+            <a class="" href="<?=site_url('tarefa/adicionar')?>">
+              <i class="icon_house_alt"></i>
+              <span>Add tarefa</span>
             </a>
-            <ul class="sub">
-              <li><a class="" href="<?=site_url('tarefa')?>">Listar</a></li>
-              <li><a class="" href="<?=site_url('tarefa/adicionar')?>">Criar</a></li>
-            </ul>
-          </li>
+            </li>
           
           <li class="sub-menu">
             <a href="javascript:;" class="">
             <i class="icon_document_alt"></i>
-              <span>Cadastros</span>
+              <span>Listar</span>
               <span class="menu-arrow arrow_carrot-right"></span>
             </a>
             <ul class="sub">
-              <li><a class="" href="<?=site_url('tarefatipo')?>">Tipo</a></li>
-              <li><a class="" href="<?=site_url('tarefamarca')?>">Marca</a></li>
-              <li><a class="" href="<?=site_url('marcasubmarca')?>">Sub Marca</a></li>
-              <li><a class="" href="<?=site_url('tarefastatus')?>">Status</a></li>
+              <li><a class="" href="<?=site_url('usuario')?>">Usuarios</a></li>
+              <li><a class="" href="<?=site_url('tarefa')?>">Tarefas</a></li>
+              <li><a class="" href="<?=site_url('tarefatipo')?>">Tipos</a></li>
+              <li><a class="" href="<?=site_url('tarefamarca')?>">Marcas</a></li>
+              <li><a class="" href="<?=site_url('marcasubmarca')?>">Submarcas</a></li>
+              <li><a class="" href="<?=site_url('tarefastatus')?>">Statuses</a></li>
             </ul>
           </li>
           </ul>

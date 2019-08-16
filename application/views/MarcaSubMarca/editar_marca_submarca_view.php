@@ -4,11 +4,10 @@
 
     <div class="row">
       <div class="col-lg-12">
-        <h3 class="page-header"><i class="fa fa-user"></i>Editar curso</h3>
+      <h3 class="page-header"><i class="fa fa-laptop"></i>Cadastros</h3>
         <ol class="breadcrumb">
-          <li><i class="fa fa-home"></i><a href="<?=site_url('sistema')?>">Inicio</a></li>
-          <li><i class="fa fa-user"></i><a href="<?=site_url('curso')?>">Curso</a></li>
-          <li><i class="fa fa-user"></i>Editar Tarefa Marca</li>
+          <li><i class="fa fa-home"></i><a href="">Cadastros</a></li>
+          <li><i class="fa fa-home"></i><a href="">Nova submarca</a></li>
         </ol>
       </div>
     </div>

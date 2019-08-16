@@ -3,10 +3,10 @@
     <!--overview start-->
     <div class="row">
       <div class="col-lg-12">
-        <h3 class="page-header"><i class="fa fa-laptop"></i>Tarefas Status</h3>
+        <h3 class="page-header"><i class="fa fa-laptop"></i>Cadastro</h3>
         <ol class="breadcrumb">
-          <li><i class="fa fa-home"></i><a href="<?=site_url('sistema')?>">Home</a></li>
-          <li><i class="fa fa-laptop"></i>Tipo de Tarefas</li>
+          <li><i class="fa fa-home"></i><a href="">Cadastro</a></li>
+          <li><i class="fa fa-home"></i><a href="">Tipo</a></li>
         </ol>
       </div>
     </div>
@@ -61,7 +61,7 @@
 
 <a class="btn btn-default" href="<?=site_url('tarefatipo/adicionar')?>">
 	<span class="glyphicon glyphicon-plus"></span>
-	Nova tarefa Tipo
+	Novo tipo
 </a>
 
 <!-- project team & activity end -->

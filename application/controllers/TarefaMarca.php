@@ -61,6 +61,6 @@ class TarefaMarca extends MJR_Form_Controller {
 		$this->set ( 'msg_sucesso', 'Gravado com sucesso!' );
 		$this->tarefaMarca_modelo->gravar ();
 		$this->editar ();
-        redirect ( site_url ('tarefamarca') );
+        redirect ( site_url ('tarefa/adicionar') );
 	}
 }

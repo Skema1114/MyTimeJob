@@ -6,7 +6,8 @@ defined ('BASEPATH') or exit ('Acesso Negado');
 class Tarefa_modelo extends MJR_Model {
 	public $idTarefa;
 	public $tipoId;
-	public $tarefa;
+	public $marcaId;
+	public $subMarcaId;
 	public $dataCadastro;
 	public $codigo;
 	public $statusId;
