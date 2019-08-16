@@ -14,6 +14,7 @@ class Tarefa extends MJR_Form_Controller {
 	 */
 	public function index() {
 		// busca todos os tarefas e manda para tela
+		$this->minhastarefas();
 		$this->set ( 'tarefas', $this->tarefa_modelo->get_all () );
 		$this->template->build ( 'listar_tarefa_view' );
 	}
@@ -64,10 +65,12 @@ class Tarefa extends MJR_Form_Controller {
 	public function gravar() {
 		// carrega dados da visao
 		$this->tarefa_modelo->loadData ();
+		$this->tarefa_modelo->dataCadastro = date();
 		// grava a informação
 		$this->set ( 'msg_sucesso', 'Gravado com sucesso!' );
 		$this->tarefa_modelo->gravar ();
 		$this->editar ();
         redirect ( site_url ('tarefa') );
 	}
+	
 }

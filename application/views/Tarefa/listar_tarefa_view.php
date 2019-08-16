@@ -3,8 +3,9 @@
     <!--overview start-->
     <div class="row">
       <div class="col-lg-12">
-      <h3 class="page-header"><i class="fa fa-laptop"></i>Tarefa</h3>
-        <ol class="breadcrumb">
+      <h3 class="page-header"><i class="fa fa-laptop"></i>Listar</h3>
+      <ol class="breadcrumb">
+          <li><i class="fa fa-home"></i><a href="">Listar</a></li>
           <li><i class="fa fa-home"></i><a href="">Tarefa</a></li>
         </ol>
       </div>
@@ -29,7 +30,7 @@
                <tr>
                 <th>Tipo</th>
                 <th>Marca</th>
-                <th>Sub Marca</th>
+                <th>Submarca</th>
                 <th>Data de Criação</th>
                 <th>Código</th>
                 <th>Status</th>
@@ -38,14 +39,50 @@
             </thead>
             <tbody>
              <?php foreach ($tarefas as $tarefa):?>
+
               <tr>
-                <td><?=$tarefa->tipoId?></td>
-                <td><?=$tarefa->tarefa?></td>
-                <td><?=$tarefa->subMarcaId?></td>
+                <td>
+                  <?php foreach ($tipos as $tarefaTipo):
+                    if ($tarefaTipo->idTipo == $tarefa->tipoId) {
+                        echo $tarefaTipo->nome;
+                    }
+                  endforeach;
+                  ?>
+                </td>
+                
+                <td>
+                  <?php foreach ($marcas as $tarefaMarca):
+                    if ($tarefaMarca->idMarca == $tarefa->marcaId) {
+                        echo $tarefaMarca->nome;
+                    }
+                  endforeach;
+                  ?>
+                </td>
+
+                <td> 
+                  <?php foreach ($submarcas as $marcaSubMarca):
+                    if ($marcaSubMarca->idSubMarca == $tarefa->subMarcaId) {
+                        echo $marcaSubMarca->nome;
+                    }
+                  endforeach;
+                  ?>
+                </td>
+
                 <td><?=$tarefa->dataCadastro?></td>
+                
                 <td><?=$tarefa->codigo?></td>
-                <td><?=$tarefa->statusId?></td>
+                
+                <td>
+                  <?php foreach ($statuses as $tarefaStatus):
+                    if ($tarefaStatus->idStatus == $tarefa->statusId) {
+                        echo $tarefaStatus->nome;
+                    }
+                  endforeach;
+                  ?>
+                </td>
+                
                 <td><?=$tarefa->dataModificacao?></td>
+                
                 <td><?php echo anchor('tarefa/editar/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-pencil"></span>')?></td>
                 <td><?php echo anchor('tarefa/remover/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-remove"></span>')?></td>
               </tr>

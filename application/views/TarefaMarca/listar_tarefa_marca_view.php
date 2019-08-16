@@ -3,9 +3,9 @@
     <!--overview start-->
     <div class="row">
       <div class="col-lg-12">
-      <h3 class="page-header"><i class="fa fa-laptop"></i>Cadastros</h3>
+      <h3 class="page-header"><i class="fa fa-laptop"></i>Listar</h3>
         <ol class="breadcrumb">
-          <li><i class="fa fa-home"></i><a href="">Cadastros</a></li>
+          <li><i class="fa fa-home"></i><a href="">Listar</a></li>
           <li><i class="fa fa-home"></i><a href="">Marca</a></li>
         </ol>
       </div>
@@ -31,7 +31,7 @@
                 <th>#</th>
                 <th>Nome</th>
                 <th>Descrição</th>
-                <th>Sub Marca</th>
+                <th>Submarca</th>
                 <th>Data de Criação</th>
               </tr>
             </thead>
@@ -41,7 +41,16 @@
                 <td><?=$tarefaMarca->idMarca?></td>
                 <td><?=$tarefaMarca->nome?></td>
                 <td><?=$tarefaMarca->descricao?></td>
-                <td><?=$tarefaMarca->subMarcaId?></td>
+                
+                <td>
+                  <?php foreach ($submarcas as $marcaSubMarca):
+                    if ($marcaSubMarca->idSubMarca == $tarefaMarca->subMarcaId) {
+                      echo $tarefaMarca->nome;
+                    }
+                  endforeach;
+                  ?>
+                </td>
+                
                 <td><?=$tarefaMarca->dataCadastro?></td>
                 <td><?php echo anchor('tarefamarca/editar/'.$tarefaMarca->idMarca,'<span class="glyphicon glyphicon-pencil"></span>')?></td>
                 <td><?php echo anchor('tarefamarca/remover/'.$tarefaMarca->idMarca,'<span class="glyphicon glyphicon-remove"></span>')?></td>

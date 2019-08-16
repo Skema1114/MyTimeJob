@@ -14,13 +14,20 @@ class TarefaMarca extends MJR_Form_Controller {
 	 */
 	public function index() {
 		// busca todos os tarefas e manda para tela
+		$this->minhasmarcas();
 		$this->set ( 'marca', $this->tarefaMarca_modelo->get_all () );
 		$this->template->build ( 'listar_tarefa_marca_view' );
 	}
 
 	public function minhasmarcas() {
 		// busca todos os tarefas e manda para tela
+		$this->load->model ( 'tarefaStatus_modelo' );
+		$this->load->model ( 'tarefaTipo_modelo' );
 		$this->load->model ( 'marcaSubMarca_modelo' );
+		$this->load->model ( 'tarefaMarca_modelo' );
+		$this->set ( 'tipos', $this->tarefaTipo_modelo->get_all () );
+		$this->set ( 'statuses', $this->tarefaStatus_modelo->get_all () );
+		$this->set ( 'marcas', $this->tarefaMarca_modelo->get_all () );
 		$this->set ( 'submarcas', $this->marcaSubMarca_modelo->get_all () );
 	}
 	

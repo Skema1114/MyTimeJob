@@ -75,7 +75,7 @@
                       
                       <div class="col-sm-2">
                       <label for='subMarcaId' class="control-label"><strong>&nbsp</strong></label><br>
-                    <a class="btn btn-info btn-block" href="<?=site_url('marcaSubMarca/adicionar')?>">
+                      <a class="btn btn-info btn-block" href="<?=site_url('marcaSubMarca/adicionar')?>">
                       <span class="glyphicon glyphicon-menu-left"></span>
                       <strong>Nova submarca</strong>
                     </a>
@@ -119,9 +119,9 @@
                 -->
               </div>
 
-              <div class='form-group required'>
+              <div class='form-group'>
                 <label for='dataCadastro' class="control-label"><strong>Data</strong></label>
-                <input required type='date' id='dataCadastro' name='dataCadastro' class='form-control' value="<?=$this->tarefa_modelo->dataCadastro?>">
+                <input type='date' id='dataCadastro' name='dataCadastro' class='form-control' value="<?=$this->tarefa_modelo->dataCadastro?>">
               </div>
 
               <div class='form-group required'>
