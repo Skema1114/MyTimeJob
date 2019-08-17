@@ -53,6 +53,7 @@ class TarefaStatus extends MJR_Form_Controller {
 		$this->tarefaStatus_modelo->loadData ();
 		// grava a informação
 		$this->set ( 'msg_sucesso', 'Gravado com sucesso!' );
+		$this->tarefaStatus_modelo->dataCadastro = date("Y-m-d H:i:s");
 		$this->tarefaStatus_modelo->gravar ();
 		$this->editar ();
         redirect ( site_url ('tarefa/adicionar') );

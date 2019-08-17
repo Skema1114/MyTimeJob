@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS mytimejob.Tarefa(
   tipoId INTEGER NOT NULL,
   marcaId INTEGER NOT NULL,
   subMarcaId INTEGER NOT NULL,
-  dataCadastro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  dataCadastro DATETIME NULL,
   codigo VARCHAR(45) NOT NULL,
   statusId INTEGER NOT NULL,
   dataModificacao DATETIME NULL,
@@ -71,11 +71,23 @@ CREATE TABLE IF NOT EXISTS mytimejob.Tarefa(
   CONSTRAINT fk_tarefaTipoTarefa FOREIGN KEY (tipoId) REFERENCES TarefaTipo (idTipo),
   CONSTRAINT fk_tarefaStatusTarefa FOREIGN KEY (statusId) REFERENCES TarefaStatus (idStatus),
   CONSTRAINT fk_tarefaMarcaTarefa FOREIGN KEY (marcaId) REFERENCES TarefaMarca (idMarca),
-   CONSTRAINT fk_tarefaMarcaTarefaSubMarca FOREIGN KEY (subMarcaId) REFERENCES MarcaSubMarca (idSubMarca)
+  CONSTRAINT fk_tarefaMarcaTarefaSubMarca FOREIGN KEY (subMarcaId) REFERENCES MarcaSubMarca (idSubMarca)
 )ENGINE = InnoDB;
+
 
 INSERT INTO Usuario  (nome,email,senha,tipoUsuario) values ('Administrador', 'admin@admin.com','$2y$10$uBiwX54Mym/GfsQ3QuuAIuK3L0GPItjHmS615NwSBinAKNAKTv86G',1);
 INSERT INTO Usuario  (nome,email,senha,tipoUsuario) values ('Facil Acesso', 'a@a.a','$2y$10$eZhCzoevAbvFOhWMQzajBOPVH2bSwXPTOywQbIyYb8bt46yWL0p6O',1);
+
+
+-- CREATE TRIGGER trig_data_cadastro
+-- BEFORE INSERT ON mytimejob.Tarefa
+-- FOR EACH ROW
+-- SET dataCadastro = DATE(NEW.dataCadastro);
+
+-- CREATE TRIGGER trig_data_modificacao
+-- BEFORE UPDATE ON mytimejob.Tarefa
+-- FOR EACH ROW
+-- SET dataModificacao = DATE(NEW.dataModificacao);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

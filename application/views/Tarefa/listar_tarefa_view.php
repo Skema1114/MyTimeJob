@@ -35,6 +35,8 @@
                 <th>Código</th>
                 <th>Status</th>
                 <th>Data de Modificação</th>
+                <th>&nbsp</th>
+                <th>&nbsp</th>
               </tr>
             </thead>
             <tbody>
@@ -83,8 +85,8 @@
                 
                 <td><?=$tarefa->dataModificacao?></td>
                 
-                <td><?php echo anchor('tarefa/editar/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-pencil"></span>')?></td>
-                <td><?php echo anchor('tarefa/remover/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-remove"></span>')?></td>
+                <td><button class="btn btn-block btn-warning"><?php echo anchor('tarefa/editar/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-pencil"></span>')?></button></td>
+                <td><button class="btn btn-block btn-danger"><?php echo anchor('tarefa/remover/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-remove"></span>')?></button></td>
               </tr>
             <?php endforeach;?>
           </tbody>

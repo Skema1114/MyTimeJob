@@ -66,6 +66,7 @@ class TarefaMarca extends MJR_Form_Controller {
 		$this->tarefaMarca_modelo->loadData ();
 		// grava a informação
 		$this->set ( 'msg_sucesso', 'Gravado com sucesso!' );
+		$this->tarefaMarca_modelo->dataCadastro = date("Y-m-d H:i:s");
 		$this->tarefaMarca_modelo->gravar ();
 		$this->editar ();
         redirect ( site_url ('tarefa/adicionar') );

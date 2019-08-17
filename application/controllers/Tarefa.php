@@ -64,10 +64,10 @@ class Tarefa extends MJR_Form_Controller {
 	
 	public function gravar() {
 		// carrega dados da visao
-		$this->tarefa_modelo->loadData ();
-		$this->tarefa_modelo->dataCadastro = date();
+		$this->tarefa_modelo->loadData();
 		// grava a informação
 		$this->set ( 'msg_sucesso', 'Gravado com sucesso!' );
+		$this->tarefa_modelo->dataCadastro = date("Y-m-d H:i:s");
 		$this->tarefa_modelo->gravar ();
 		$this->editar ();
         redirect ( site_url ('tarefa') );

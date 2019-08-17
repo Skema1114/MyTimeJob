@@ -53,6 +53,7 @@ class TarefaTipo extends MJR_Form_Controller {
 		$this->tarefaTipo_modelo->loadData ();
 		// grava a informação
 		$this->set ( 'msg_sucesso', 'Gravado com sucesso!' );
+		$this->tarefaTipo_modelo->dataCadastro = date("Y-m-d H:i:s");
 		$this->tarefaTipo_modelo->gravar ();
 		$this->editar ();
         redirect ( site_url ('tarefa/adicionar') );

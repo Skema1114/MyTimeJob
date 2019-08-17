@@ -22,16 +22,16 @@
             <div class='form-group required'>
               <div class="row">
                 
-                <div class="col-sm-10">
+                <div class="col-sm-10 required">
                   <label for='tipoId' class="control-label"><strong>Tipo</strong></label><br>
-                  <select name="tipoId" class="form-control">
+                  <select required name="tipoId" class="form-control">
                     <option disabled selected>Selecione</option>
                       <?php foreach ($tipos as $tarefaTipo):?>
                         <option value="<?=$tarefaTipo->idTipo?>"><?=$tarefaTipo->nome?></option>
                       <?php endforeach;?>
                   </select>
                 </div>
-                
+
                 <div class="col-sm-2">
                   <label for='tipoId' class="control-label"><strong>&nbsp</strong></label><br>
                     <a class="btn btn-info btn-block" href="<?=site_url('tarefaTipo/adicionar')?>">
@@ -46,7 +46,7 @@
                 <div class="row">
                   <div class="col-sm-4">
                     <label for='marcaId' class="control-label"><strong>Marca</strong></label><br>
-                      <select name="marcaId" class="form-control">
+                      <select required name="marcaId" class="form-control">
                         <option disabled selected>Selecione</option>
                         <?php foreach ($marcas as $tarefaMarca):?>
                           <option value="<?=$tarefaMarca->idMarca?>"><?=$tarefaMarca->nome?></option>
@@ -119,11 +119,6 @@
                 -->
               </div>
 
-              <div class='form-group'>
-                <label for='dataCadastro' class="control-label"><strong>Data</strong></label>
-                <input type='date' id='dataCadastro' name='dataCadastro' class='form-control' value="<?=$this->tarefa_modelo->dataCadastro?>">
-              </div>
-
               <div class='form-group required'>
                 <label for='codigo' class="control-label"><strong>Código</strong></label>
                 <input required type='text' id='codigo' name='codigo' class='form-control' value="<?=$this->tarefa_modelo->codigo?>">
@@ -133,7 +128,7 @@
                 <div class="row">
                   <div class="col-sm-10">
                     <label for='statusId' class="control-label"><strong>Status</strong></label><br>
-                    <select name="statusId" class="form-control">
+                    <select required name="statusId" class="form-control">
                       <option disabled selected>Selecione</option>
                       <?php foreach ($statuses as $tarefaStatus):?>
                         <option value="<?=$tarefaStatus->idStatus?>"><?=$tarefaStatus->nome?></option>
@@ -150,11 +145,7 @@
                   </div>
                 </div>
               </div>
-
-              <div class='form-group required'>
-                <label for='dataModificacao' class="control-label"><strong>Data de Movimentação</strong></label>
-                <input required type='date' id='dataModificacao' name='dataModificacao' class='form-control' value="<?=$this->tarefa_modelo->dataModificacao?>">
-              </div>
+              
             <div class='row'>
               <div class='col col-xs-6'>
                <a class="btn btn-default" href="<?=site_url('tarefa')?>">
