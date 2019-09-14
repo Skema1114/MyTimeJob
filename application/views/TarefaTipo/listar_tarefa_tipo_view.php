@@ -27,45 +27,49 @@
           <div class="panel-body">
             <table class="table bootstrap-datatable countries">
               <thead>
-               <tr>
-                <th>#</th>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Data de Criação</th>
-              </tr>
-            </thead>
-            <tbody>
-             <?php foreach ($tipo as $tarefatipo):?>
-              <tr>
-                <td><?=$tarefatipo->idTipo?></td>
-                <td><?=$tarefatipo->nome?></td>
-                <td><?=$tarefatipo->descricao?></td>
-                <td><?=$tarefatipo->dataCadastro?></td>
-                <td><?php echo anchor('tarefatipo/editar/'.$tarefatipo->idTipo,'<span class="glyphicon glyphicon-pencil"></span>')?></td>
-                <td><?php echo anchor('tarefatipo/remover/'.$tarefatipo->idTipo,'<span class="glyphicon glyphicon-remove"></span>')?></td>
-              </tr>
-            <?php endforeach;?>
-          </tbody>
-        </table>
+                <tr>
+                  <th>#</th>
+                  <th>Nome</th>
+                  <th>Descrição</th>
+                  <th>Data de Criação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($tipo as $tarefatipo):?>
+                <tr>
+                  <td><?=$tarefatipo->idTipo?></td>
+                  <td><?=$tarefatipo->nome?></td>
+                  <td><?=$tarefatipo->descricao?></td>
+                  <td><?=$tarefatipo->dataCadastro?></td>
+                  <td>
+                    <?php echo anchor('tarefatipo/editar/'.$tarefatipo->idTipo,'<span class="glyphicon glyphicon-pencil"></span>')?>
+                  </td>
+                  <td>
+                    <?php echo anchor('tarefatipo/remover/'.$tarefatipo->idTipo,'<span class="glyphicon glyphicon-remove"></span>')?>
+                  </td>
+                </tr>
+                <?php endforeach;?>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
       </div>
+
+
+      <!-- statics end -->
+
 
     </div>
 
-  </div>
+    <a class="btn btn-default" href="<?=site_url('tarefatipo/adicionar')?>">
+      <span class="glyphicon glyphicon-plus"></span>
+      Novo tipo
+    </a>
 
+    <!-- project team & activity end -->
 
-  <!-- statics end -->
-
-
-</div>
-
-<a class="btn btn-default" href="<?=site_url('tarefatipo/adicionar')?>">
-	<span class="glyphicon glyphicon-plus"></span>
-	Novo tipo
-</a>
-
-<!-- project team & activity end -->
-
+  </section>
 </section>
-</section>
-    <!--main content end-->
+<!--main content end-->

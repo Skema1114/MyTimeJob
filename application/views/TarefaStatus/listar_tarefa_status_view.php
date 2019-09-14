@@ -27,45 +27,49 @@
           <div class="panel-body">
             <table class="table bootstrap-datatable countries">
               <thead>
-               <tr>
-                <th>#</th>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Data de Criação</th>
-              </tr>
-            </thead>
-            <tbody>
-             <?php foreach ($status as $tarefastatus):?>
-              <tr>
-                <td><?=$tarefastatus->idStatus?></td>
-                <td><?=$tarefastatus->nome?></td>
-                <td><?=$tarefastatus->descricao?></td>
-                <td><?=$tarefastatus->dataCadastro?></td>
-                <td><?php echo anchor('tarefastatus/editar/'.$tarefastatus->idStatus,'<span class="glyphicon glyphicon-pencil"></span>')?></td>
-                <td><?php echo anchor('tarefastatus/remover/'.$tarefastatus->idStatus,'<span class="glyphicon glyphicon-remove"></span>')?></td>
-              </tr>
-            <?php endforeach;?>
-          </tbody>
-        </table>
+                <tr>
+                  <th>#</th>
+                  <th>Nome</th>
+                  <th>Descrição</th>
+                  <th>Data de Criação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($status as $tarefastatus):?>
+                <tr>
+                  <td><?=$tarefastatus->idStatus?></td>
+                  <td><?=$tarefastatus->nome?></td>
+                  <td><?=$tarefastatus->descricao?></td>
+                  <td><?=$tarefastatus->dataCadastro?></td>
+                  <td>
+                    <?php echo anchor('tarefastatus/editar/'.$tarefastatus->idStatus,'<span class="glyphicon glyphicon-pencil"></span>')?>
+                  </td>
+                  <td>
+                    <?php echo anchor('tarefastatus/remover/'.$tarefastatus->idStatus,'<span class="glyphicon glyphicon-remove"></span>')?>
+                  </td>
+                </tr>
+                <?php endforeach;?>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
       </div>
+
+
+      <!-- statics end -->
+
 
     </div>
 
-  </div>
+    <a class="btn btn-default" href="<?=site_url('tarefastatus/adicionar')?>">
+      <span class="glyphicon glyphicon-plus"></span>
+      Novo status
+    </a>
 
+    <!-- project team & activity end -->
 
-  <!-- statics end -->
-
-
-</div>
-
-<a class="btn btn-default" href="<?=site_url('tarefastatus/adicionar')?>">
-	<span class="glyphicon glyphicon-plus"></span>
-	Novo status
-</a>
-
-<!-- project team & activity end -->
-
+  </section>
 </section>
-</section>
-    <!--main content end-->
+<!--main content end-->

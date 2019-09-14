@@ -5,9 +5,9 @@
 class Tarefa extends MJR_Form_Controller {
 	public function __construct() {
 		parent::__construct ();
-		$this->load->model ( 'tarefa_modelo' );		
+		$this->load->model ( 'tarefa_modelo' );
 	}
-	
+
 	/**
 	 * Metodo chamado pro default da classe,
 	 *  carrega a view de listagem de tarefas
@@ -30,7 +30,7 @@ class Tarefa extends MJR_Form_Controller {
 		$this->set ( 'marcas', $this->tarefaMarca_modelo->get_all () );
 		$this->set ( 'submarcas', $this->marcaSubMarca_modelo->get_all () );
 	}
-	
+
 	/**
 	 * Carrega view com formulário para adicionar tarefas
 	 */
@@ -38,7 +38,7 @@ class Tarefa extends MJR_Form_Controller {
 		// redireciona para edicao
 		$this->editar ();
 	}
-	
+
 	/**
 	 * Remove um tarefa
 	 */
@@ -48,20 +48,20 @@ class Tarefa extends MJR_Form_Controller {
 		// atualiza tabela
 		$this->index ();
 	}
-	
+
 	/**
 	 * Carrega formulário para edição de tarefas
 	 */
 	public function editar($id = 0) {
-		
-		$this->tarefa_modelo->get_by_id($id); 
+
+		$this->tarefa_modelo->get_by_id($id);
 		// carrega template
 		$this->minhastarefas();
 		$this->template->build ( 'editar_tarefa_view' );
 
 	}
-	
-	
+
+
 	public function gravar() {
 		// carrega dados da visao
 		$this->tarefa_modelo->loadData();
@@ -72,5 +72,5 @@ class Tarefa extends MJR_Form_Controller {
 		$this->editar ();
         redirect ( site_url ('tarefa') );
 	}
-	
+
 }

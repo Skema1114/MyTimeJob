@@ -12,12 +12,12 @@ class Tarefa_modelo extends MJR_Model {
 	public $codigo;
 	public $statusId;
 	public $dataModificacao;
-	
-	
+
+
     public function __construct(){
         parent::__construct('Tarefa');
     }
-	
+
 	function get_id_field() {
 		return "idTarefa";
 	}

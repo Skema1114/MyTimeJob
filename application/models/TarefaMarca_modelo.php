@@ -9,13 +9,13 @@ class TarefaMarca_modelo extends MJR_Model {
 	public $descricao;
 	public $subMarcaId;
 	public $dataCadastro;
-	
+
     public function __construct(){
         parent::__construct('TarefaMarca');
     }
-	
+
 	function get_id_field() {
 		return "idMarca";
 	}
-	
+
 }

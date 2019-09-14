@@ -8,7 +8,7 @@ class PedidoAtualizacao_modelo extends MJR_Model {
 	public function __construct() {
 		parent::__construct ( 'PedidoAtualizacao' );
 	}
-	
+
 	function get_id_field() {
 		return "idPedidoAtualizacao";
 	}

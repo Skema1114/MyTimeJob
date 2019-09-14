@@ -19,10 +19,10 @@ class Login extends CI_Controller {
 	public function logar() {
 		$email = $this->security->xss_clean ( $this->input->post ( 'email' ) );
 		$senha = $this->security->xss_clean ( $this->input->post ( 'senha' ) );
-		
+
 		if ($userdata = $this->usuario_modelo->login ( $email, $senha )) {
 			$this->session->set_userdata ( $userdata );
-			
+
 			if ($userdata['tipoUsuario'] == 1) {
 				redirect ( site_url ( 'sistema' ) );
 			}
@@ -31,7 +31,7 @@ class Login extends CI_Controller {
 				$candidato = $this->candidato_modelo->busca_por_usuario ( $userdata ['id'] );
 				$this->session->set_userdata ( 'candidato', $candidato );
 				redirect ( site_url ( 'candidato' ) );
-				
+
 			}
 		} else {
 			$this->index ( "Email ou Senha incorretos!" );
@@ -52,6 +52,6 @@ class Login extends CI_Controller {
 		if($usu){
 			echo $usu->nome;
 		}
-		
+
 	}
 }

@@ -28,6 +28,7 @@
             <table class="table bootstrap-datatable countries">
               <thead>
                <tr>
+                <th>#</th>
                 <th>Tipo</th>
                 <th>Marca</th>
                 <th>Submarca</th>
@@ -43,6 +44,7 @@
              <?php foreach ($tarefas as $tarefa):?>
 
               <tr>
+                <td><?=$tarefa->idTarefa?></td>
                 <td>
                   <?php foreach ($tipos as $tarefaTipo):
                     if ($tarefaTipo->idTipo == $tarefa->tipoId) {
@@ -85,8 +87,8 @@
                 
                 <td><?=$tarefa->dataModificacao?></td>
                 
-                <td><button class="btn btn-block btn-warning"><?php echo anchor('tarefa/editar/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-pencil"></span>')?></button></td>
-                <td><button class="btn btn-block btn-danger"><?php echo anchor('tarefa/remover/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-remove"></span>')?></button></td>
+                <td><?php echo anchor('tarefa/editar/'.$tarefa->idTarefa,'<span id="delete" class="glyphicon glyphicon-pencil"></span>')?></td>
+                <td><?php echo anchor('tarefa/remover/'.$tarefa->idTarefa,'<span class="glyphicon glyphicon-remove"></span>')?></td>
               </tr>
             <?php endforeach;?>
           </tbody>

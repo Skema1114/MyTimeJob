@@ -5,9 +5,9 @@
 class MarcaSubMarca extends MJR_Form_Controller {
 	public function __construct() {
 		parent::__construct ();
-		$this->load->model ( 'marcaSubMarca_modelo' );				
+		$this->load->model ( 'marcaSubMarca_modelo' );
 	}
-	
+
 	/**
 	 * Metodo chamado pro default da classe,
 	 *  carrega a view de listagem de tarefas
@@ -17,7 +17,7 @@ class MarcaSubMarca extends MJR_Form_Controller {
 		$this->set ( 'submarca', $this->marcaSubMarca_modelo->get_all () );
 		$this->template->build ( 'listar_marca_submarca_view' );
 	}
-	
+
 	/**
 	 * Carrega view com formulário para adicionar tarefas
 	 */
@@ -25,7 +25,7 @@ class MarcaSubMarca extends MJR_Form_Controller {
 		// redireciona para edicao
 		$this->editar ();
 	}
-	
+
 	/**
 	 * Remove um tarefa
 	 */
@@ -35,19 +35,19 @@ class MarcaSubMarca extends MJR_Form_Controller {
 		// atualiza tabela
 		$this->index ();
 	}
-	
+
 	/**
 	 * Carrega formulário para edição de tarefas
 	 */
 	public function editar($id = 0) {
-		
-		$this->marcaSubMarca_modelo->get_by_id($id); 
+
+		$this->marcaSubMarca_modelo->get_by_id($id);
 		// carrega template
 		$this->template->build ( 'editar_marca_submarca_view' );
 
 	}
-	
-	
+
+
 	public function gravar() {
 		// carrega dados da visao
 		$this->marcaSubMarca_modelo->loadData ();

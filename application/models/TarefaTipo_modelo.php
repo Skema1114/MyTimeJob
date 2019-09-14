@@ -8,13 +8,13 @@ class TarefaTipo_modelo extends MJR_Model {
 	public $nome;
 	public $descricao;
 	public $dataCadastro;
-	
+
     public function __construct(){
         parent::__construct('TarefaTipo');
     }
-	
+
 	function get_id_field() {
 		return "idTipo";
 	}
-	
+
 }

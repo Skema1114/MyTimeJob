@@ -23,25 +23,33 @@
   <?= link_tag('assets/css/style.css')?>
   <?= link_tag('assets/css/style-responsive.css')?>
 </head>
-		<body class="login-img3-body">
-		<div class='container'>
-			<?php echo $template['body']; ?>	
-		</div>
-		<footer class="pull-left footer" style="position: absolute;bottom: 0px; width: 100%; text-align: center;z-index:-1"  >
-  			<p class="col-md-12">
-  				
-  				Copyright &COPY; 2019 <a href="http://www.missoesjr.com.br">Missões Júnior</a>
-  			</p>
-  		</footer>
-  		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-98821359-1', 'auto');
-		  ga('send', 'pageview');
+<body class="login-img3-body">
+  <div class='container'>
+    <?php echo $template['body']; ?>
+  </div>
+  <footer class="pull-left footer" style="position: absolute;bottom: 0px; width: 100%; text-align: center;z-index:-1">
+    <p class="col-md-12">
 
-		</script>
-	</body>
+      Copyright &COPY; 2019 <a href="http://www.missoesjr.com.br">Missões Júnior</a>
+    </p>
+  </footer>
+  <script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-98821359-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+
 </html>

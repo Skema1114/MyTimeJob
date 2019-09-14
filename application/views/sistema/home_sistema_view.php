@@ -7,16 +7,16 @@
         </div>
       </div>
 
-      
+
       <!-- Today status end -->
 
       <div class="row">
 
         <div class="col-md-12">
           <div class="panel panel-default">
-            
+
             <div class="panel-body">
-              
+
               <h1>Inicio</h1>
 
 
@@ -25,16 +25,16 @@
           </div>
 
         </div>
-        
+
 
         <!-- statics end -->
 
 
       </div><br><br>
 
-      
+
       <!-- project team & activity end -->
 
     </section>
   </section>
-    <!--main content end-->
+  <!--main content end-->

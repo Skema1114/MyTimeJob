@@ -8,13 +8,13 @@ class MarcaSubMarca_modelo extends MJR_Model {
 	public $nome;
 	public $descricao;
 	public $dataCadastro;
-	
+
     public function __construct(){
         parent::__construct('MarcaSubMarca');
     }
-	
+
 	function get_id_field() {
 		return "idSubMarca";
 	}
-	
+
 }
